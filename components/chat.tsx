@@ -4,7 +4,8 @@ import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useRouter, useSearchParams } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
-import useSWR, { useSWRConfig } from "swr";
+import useSWR from "swr";
+import { useSWRConfig } from "swr";
 import { unstable_serialize } from "swr/infinite";
 import { ChatHeader } from "@/components/chat-header";
 import {
@@ -20,6 +21,7 @@ import {
 import { useArtifactSelector } from "@/hooks/use-artifact";
 import { useAutoResume } from "@/hooks/use-auto-resume";
 import { useChatVisibility } from "@/hooks/use-chat-visibility";
+import { useEmbedding } from "@/hooks/use-embedding";
 import type { Vote } from "@/lib/db/schema";
 import { ChatSDKError } from "@/lib/errors";
 import type { Attachment, ChatMessage } from "@/lib/types";
@@ -72,6 +74,9 @@ export function Chat({
   const [showCreditCardAlert, setShowCreditCardAlert] = useState(false);
   const [currentModelId, setCurrentModelId] = useState(initialChatModel);
   const currentModelIdRef = useRef(currentModelId);
+  
+  // Initialize embedding for RAG
+  const { embed: embedQuery, ready: embeddingReady } = useEmbedding();
 
   useEffect(() => {
     currentModelIdRef.current = currentModelId;
@@ -109,7 +114,7 @@ export function Chat({
     transport: new DefaultChatTransport({
       api: "/api/chat",
       fetch: fetchWithErrorHandlers,
-      prepareSendMessagesRequest(request) {
+      async prepareSendMessagesRequest(request) {
         const lastMessage = request.messages.at(-1);
 
         // Check if this is a tool approval continuation:
@@ -126,6 +131,18 @@ export function Chat({
             })
           );
 
+        // Embed the user query for RAG retrieval
+        let queryEmbedding: number[] | undefined;
+        if (lastMessage?.role === "user" && !isToolApprovalContinuation && embeddingReady) {
+          const textPart = lastMessage.parts?.find((p) => p.type === "text");
+          if (textPart && "text" in textPart) {
+            const embedding = await embedQuery(textPart.text);
+            if (embedding) {
+              queryEmbedding = embedding;
+            }
+          }
+        }
+
         return {
           body: {
             id: request.id,
@@ -135,6 +152,7 @@ export function Chat({
               : { message: lastMessage }),
             selectedChatModel: currentModelIdRef.current,
             selectedVisibilityType: visibilityType,
+            ...(queryEmbedding && { queryEmbedding }),
             ...request.body,
           },
         };

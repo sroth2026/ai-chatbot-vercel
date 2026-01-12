@@ -34,6 +34,8 @@ export const postRequestBodySchema = z.object({
   messages: z.array(messageSchema).optional(),
   selectedChatModel: z.string(),
   selectedVisibilityType: z.enum(["public", "private"]),
+  // Optional embedding vector for RAG retrieval
+  queryEmbedding: z.array(z.number()).optional(),
 });
 
 export type PostRequestBody = z.infer<typeof postRequestBodySchema>;
