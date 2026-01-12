@@ -1,0 +1,160 @@
+The AI Caddie
+What the AI Caddie Is
+
+The AI Caddie is the intelligence layer of the app.
+
+It is designed to behave like a real on-course caddie, not a chatbot, swing coach, or generic tip generator.
+
+Its job is to help golfers:
+
+make better decisions
+
+choose smarter targets
+
+avoid unnecessary risk
+
+learn from past mistakes
+
+All guidance is situational, concise, and grounded in the golfer’s actual data.
+
+What the AI Caddie Is Not
+
+The AI Caddie intentionally avoids:
+
+swing mechanics advice
+
+long explanations mid-round
+
+generic “tips” that ignore context
+
+overconfidence or absolute statements
+
+It never tells a golfer what they must do — it presents smart options.
+
+Inputs the AI Uses
+
+The AI reasons using a combination of:
+
+Live hole context
+
+yardages
+
+pin location
+
+selected target
+
+hole layout
+
+The golfer’s bag
+
+actual carry distances
+
+preferred clubs
+
+control vs distance tradeoffs
+
+Historical performance
+
+miss tendencies
+
+approach success rates
+
+scoring patterns
+
+Current situation
+
+lie
+
+distance
+
+risk level
+
+This allows the AI to reason like:
+
+“Given who you are as a golfer, on this hole, right now…”
+
+Types of AI Guidance
+
+The AI Caddie provides guidance such as:
+
+Club selection suggestions
+
+factoring in carry, miss bias, and trouble
+
+Target strategy
+
+center-of-green vs aggressive pins
+
+safe layup zones
+
+Risk assessment
+
+when going for it is statistically smart
+
+when it’s unnecessary
+
+Pattern callouts
+
+recurring mistakes from similar distances
+
+tendencies that show up under pressure
+
+All guidance is short, readable, and actionable.
+
+Tone & Behavior
+
+The AI is designed to feel:
+
+calm
+
+confident
+
+neutral
+
+supportive
+
+It avoids:
+
+hype language
+
+shaming mistakes
+
+overwhelming detail
+
+If a human caddie wouldn’t say it while you’re standing over the ball, neither will the AI.
+
+Timing Matters
+
+The AI behaves differently depending on when it’s used:
+
+Before a shot → quick decision guidance
+
+After a hole → light reflection
+
+Post-round → deeper analysis
+
+This prevents cognitive overload during play.
+
+Learning Over Time
+
+The AI is not static.
+
+As more rounds are logged, it becomes better at:
+
+understanding preferred distances
+
+recognizing miss patterns
+
+adjusting risk tolerance
+
+personalizing advice
+
+The experience improves naturally, without user tuning.
+
+Philosophy
+
+A great caddie doesn’t make you play their game.
+
+They help you play your best game.
+
+That’s exactly what the AI Caddie is built to do.

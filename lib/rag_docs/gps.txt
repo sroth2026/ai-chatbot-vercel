@@ -1,0 +1,105 @@
+On-Course GPS & Map Intelligence
+Purpose
+
+The on-course map is the foundation of the in-round experience.
+It provides real-time spatial awareness so golfers can make confident, informed decisions before every shot.
+
+This is not just a yardage screen — it’s a decision surface.
+
+Core Map Experience
+
+The app uses an interactive, satellite-style golf map that shows the hole in context, including:
+
+the golfer’s current position
+
+the pin location
+
+optional targets and landing areas
+
+Distances update dynamically as markers are moved, giving golfers a clear picture of what each shot actually requires.
+
+The map is intentionally minimal and uncluttered so it can be used mid-round without slowing play.
+
+Draggable Markers & Live Yardages
+
+The map supports multiple draggable markers, each serving a specific purpose:
+
+Player marker — current ball location
+
+Target marker — preferred landing area or layup point
+
+Pin marker — hole location
+
+As markers move, the app recalculates:
+
+distance from ball to target
+
+distance from target to pin
+
+total carry vs remaining yardage
+
+This allows golfers to visualize risk vs reward in real time.
+
+Why This Matters
+
+Most golfers don’t struggle because they lack swing mechanics — they struggle because they:
+
+misjudge distances
+
+choose the wrong target
+
+underestimate trouble
+
+overestimate carry
+
+The map helps eliminate guesswork by making the hole measurable and understandable, not just visible.
+
+Designed for Real Play
+
+Key design principles:
+
+Fast load times
+
+Smooth drag interactions
+
+No unnecessary overlays
+
+Readable outdoors in bright light
+
+The map is meant to be used standing over the ball, not studied like a spreadsheet.
+
+Integration with the AI Caddie
+
+The map is not isolated — it feeds directly into the AI system.
+
+When a golfer asks for advice or receives a suggestion, the AI already knows:
+
+current yardage
+
+relative pin position
+
+selected target
+
+distance gaps between shots
+
+This allows the AI to reason spatially, not just statistically.
+
+Strategic Use Cases
+
+The map enables golfers to:
+
+choose safer layup zones
+
+plan approach distances they prefer
+
+avoid short-siding misses
+
+decide when going for it makes sense
+
+It shifts the golfer’s mindset from “How far is it?” to “What’s the smartest play?”
+
+Philosophy
+
+A good caddie doesn’t just tell yardage — they help you see the hole correctly.
+
+The map exists to do exactly that.

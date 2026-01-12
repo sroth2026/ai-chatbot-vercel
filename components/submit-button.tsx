@@ -9,29 +9,32 @@ import { Button } from "./ui/button";
 export function SubmitButton({
   children,
   isSuccessful,
+  isLoading = false,
 }: {
   children: React.ReactNode;
   isSuccessful: boolean;
+  isLoading?: boolean;
 }) {
   const { pending } = useFormStatus();
+  const showLoader = pending || isSuccessful || isLoading;
 
   return (
     <Button
-      aria-disabled={pending || isSuccessful}
+      aria-disabled={showLoader}
       className="relative"
-      disabled={pending || isSuccessful}
-      type={pending ? "button" : "submit"}
+      disabled={showLoader}
+      type={showLoader ? "button" : "submit"}
     >
       {children}
 
-      {(pending || isSuccessful) && (
+      {showLoader && (
         <span className="absolute right-4 animate-spin">
           <LoaderIcon />
         </span>
       )}
 
       <output aria-live="polite" className="sr-only">
-        {pending || isSuccessful ? "Loading" : "Submit form"}
+        {showLoader ? "Loading" : "Submit form"}
       </output>
     </Button>
   );

@@ -23,9 +23,13 @@ export async function proxy(request: NextRequest) {
     secureCookie: !isDevelopmentEnvironment,
   });
 
-  if (!token) {
-    const redirectUrl = encodeURIComponent(request.url);
 
+  // Allow unauthenticated access to /login, /register, and public assets
+  if (!token) {
+    if (["/login", "/register"].includes(pathname) || pathname.startsWith("/images/")) {
+      return NextResponse.next();
+    }
+    const redirectUrl = encodeURIComponent(request.url);
     return NextResponse.redirect(
       new URL(`/api/auth/guest?redirectUrl=${redirectUrl}`, request.url)
     );

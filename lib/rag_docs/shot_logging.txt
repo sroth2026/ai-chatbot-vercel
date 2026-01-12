@@ -1,0 +1,129 @@
+Shot-Level Logging & Data Capture Philosophy
+Purpose
+
+Shot-level data is the backbone of meaningful golf analysis — but only if it’s fast, intuitive, and realistic to log during play.
+
+This product is designed around a simple belief:
+
+The best data is the data golfers are actually willing to record.
+
+What Gets Logged
+
+Instead of overwhelming users with dozens of inputs per shot, the app focuses on high-signal information:
+
+Drives
+
+direction (left / center / right)
+
+lie (fairway, rough, hazard, recovery)
+
+Approaches
+
+approximate distance
+
+result (GIR, short, long, left, right)
+
+Short Game
+
+chip or pitch outcome
+
+distance context when relevant
+
+Putting
+
+number of putts
+
+miss direction when applicable
+
+These inputs are intentionally outcome-focused, not swing-focused.
+
+Why Outcome-Based Data Matters
+
+Golf is a results game.
+
+Instead of trying to analyze swing mechanics, the app tracks what actually happened — and uses that to surface patterns like:
+
+missed approaches from specific distances
+
+directional tendencies under pressure
+
+short game consistency inside scoring range
+
+putting efficiency by distance band
+
+This allows for actionable insights without requiring a launch monitor or sensors.
+
+Designed for In-Round Use
+
+Key principles guiding the logging experience:
+
+one screen per hole
+
+minimal taps
+
+no typing unless optional notes are added
+
+quick editing if a hole is revisited
+
+The golfer can log a hole in seconds, not minutes.
+
+Prefilled & Editable Inputs
+
+When revisiting a hole:
+
+previously logged values are automatically prefilled
+
+golfers can edit shots without friction
+
+completed holes are visually marked
+
+This ensures data stays accurate without being annoying.
+
+Optional Notes & Context
+
+Golfers can optionally add short notes such as:
+
+mental mistakes
+
+wind conditions
+
+club selection regrets
+
+execution thoughts
+
+These notes are treated as qualitative context, not required fields.
+
+They become especially powerful when combined with AI analysis later.
+
+Data Consistency Over Perfection
+
+The app prioritizes consistency over absolute precision.
+
+It’s better to log:
+
+“missed right from 165”
+than:
+
+nothing at all because the input was too complex
+
+This approach leads to stronger long-term trends and better AI insights.
+
+How the Data Feeds the AI
+
+Every logged shot becomes part of the golfer’s evolving profile:
+
+distance tendencies
+
+miss patterns
+
+scoring efficiency by hole type
+
+decision outcomes over time
+
+The AI uses this data to adapt advice, not just report stats.
+
+Philosophy
+
+This isn’t about turning golf into a data science experiment.
+
+It’s about capturing just enough truth to play smarter next time.

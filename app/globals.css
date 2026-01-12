@@ -11,80 +11,84 @@
 @plugin "tailwindcss-animate";
 @plugin "@tailwindcss/typography";
 
-/* define design tokens (light mode) */
+/* Golf Theme Design Tokens (Light Mode) */
 :root {
-  --background: #F4F6F8; /* Light Neutral (Chalk White) */
-  --foreground: #2B2E34; /* Dark Neutral (Iron Gray) */
-  --card: #F4F6F8; /* Light Neutral */
-  --card-foreground: #2B2E34; /* Dark Neutral */
-  --popover: #F4F6F8;
-  --popover-foreground: #2B2E34;
-  --primary: #0A2D4E; /* Brand Navy */
-  --primary-foreground: #F4F6F8; /* Light Neutral */
-  --secondary: #1F4E79; /* Steel Blue */
-  --secondary-foreground: #F4F6F8; /* Light Neutral */
-  --muted: #3A5F7D; /* Slate Blue-Gray */
-  --muted-foreground: #2B2E34; /* Dark Neutral */
-  --accent: #2B2E34; /* Iron Gray */
-  --accent-foreground: #F4F6F8; /* Light Neutral */
+  --background: #F5F7F4; /* Scorecard White */
+  --foreground: #2E2E2E; /* Iron Charcoal */
+  --card: #F5F7F4; /* Scorecard White */
+  --card-foreground: #2E2E2E; /* Iron Charcoal */
+  --popover: #F5F7F4;
+  --popover-foreground: #2E2E2E;
+  --primary: #0F7A2A; /* Lion Caddie Green */
+  --primary-foreground: #F5F7F4; /* Scorecard White */
+  --secondary: #1F9A3F; /* Fairway Green */
+  --secondary-foreground: #F5F7F4; /* Scorecard White */
+  --tertiary: #0B4F1A; /* Pine Green */
+  --tertiary-foreground: #F5F7F4;
+  --muted: #1F9A3F; /* Fairway Green (for muted highlights) */
+  --muted-foreground: #2E2E2E; /* Iron Charcoal */
+  --accent: #0F7A2A; /* Lion Caddie Green */
+  --accent-foreground: #F5F7F4;
   --destructive: #D32F2F; /* Red for destructive actions */
-  --destructive-foreground: #F4F6F8;
-  --border: #3A5F7D; /* Slate Blue-Gray */
-  --input: #F4F6F8;
-  --ring: #1F4E79; /* Steel Blue */
-  --chart-1: #0A2D4E;
-  --chart-2: #1F4E79;
-  --chart-3: #3A5F7D;
-  --chart-4: #2B2E34;
-  --chart-5: #F4F6F8;
-  --sidebar-background: #F4F6F8;
-  --sidebar-foreground: #2B2E34;
-  --sidebar-primary: #0A2D4E;
-  --sidebar-primary-foreground: #F4F6F8;
-  --sidebar-accent: #1F4E79;
-  --sidebar-accent-foreground: #F4F6F8;
-  --sidebar-border: #3A5F7D;
-  --sidebar-ring: #1F4E79;
-  /* border radius unit */
+  --destructive-foreground: #F5F7F4;
+  --border: #1F9A3F; /* Fairway Green */
+  --input: #F5F7F4; /* Scorecard White */
+  --ring: #1F9A3F; /* Fairway Green */
+  --chart-1: #0F7A2A;
+  --chart-2: #1F9A3F;
+  --chart-3: #0B4F1A;
+  --chart-4: #2E2E2E;
+  --chart-5: #F5F7F4;
+  --sidebar-background: #F5F7F4;
+  --sidebar-foreground: #2E2E2E;
+  --sidebar-primary: #0F7A2A;
+  --sidebar-primary-foreground: #F5F7F4;
+  --sidebar-accent: #1F9A3F;
+  --sidebar-accent-foreground: #F5F7F4;
+  --sidebar-border: #1F9A3F;
+  --sidebar-ring: #1F9A3F;
   --radius: 0.5rem;
-  --sidebar: #F4F6F8;
+  --sidebar: #F5F7F4;
 }
 
-/* define design tokens (dark mode) */
+/* Golf Theme Design Tokens (Dark Mode) */
 .dark {
-  --background: #0A2D4E; /* Brand Navy as dark background */
-  --foreground: #F4F6F8; /* Chalk White for text */
-  --card: #1F4E79; /* Steel Blue for cards */
-  --card-foreground: #F4F6F8;
-  --popover: #1F4E79;
-  --popover-foreground: #F4F6F8;
-  --primary: #F4F6F8; /* Chalk White for primary */
-  --primary-foreground: #0A2D4E; /* Brand Navy for text on primary */
-  --secondary: #3A5F7D; /* Slate Blue-Gray */
-  --secondary-foreground: #F4F6F8;
-  --muted: #2B2E34; /* Iron Gray for muted */
-  --muted-foreground: #F4F6F8;
-  --accent: #1F4E79; /* Steel Blue as accent */
-  --accent-foreground: #F4F6F8;
+  --background: #0B4F1A; /* Pine Green */
+  --foreground: #F5F7F4; /* Scorecard White */
+  --card: #0F7A2A; /* Lion Caddie Green */
+  --card-foreground: #F5F7F4;
+  --popover: #0F7A2A;
+  --popover-foreground: #F5F7F4;
+  --primary: #1F9A3F; /* Fairway Green */
+  --primary-foreground: #F5F7F4;
+  --secondary: #0F7A2A; /* Lion Caddie Green */
+  --secondary-foreground: #F5F7F4;
+  --tertiary: #0B4F1A; /* Pine Green */
+  --tertiary-foreground: #F5F7F4;
+  --muted: #1F9A3F; /* Fairway Green */
+  --muted-foreground: #F5F7F4;
+  --accent: #1F9A3F; /* Fairway Green */
+  --accent-foreground: #F5F7F4;
   --destructive: #D32F2F;
-  --destructive-foreground: #F4F6F8;
-  --border: #3A5F7D;
-  --input: #1F4E79;
-  --ring: #F4F6F8;
-  --chart-1: #F4F6F8;
-  --chart-2: #1F4E79;
-  --chart-3: #3A5F7D;
-  --chart-4: #2B2E34;
-  --chart-5: #0A2D4E;
-  --sidebar-background: #0A2D4E;
-  --sidebar-foreground: #F4F6F8;
-  --sidebar-primary: #F4F6F8;
-  --sidebar-primary-foreground: #0A2D4E;
-  --sidebar-accent: #1F4E79;
-  --sidebar-accent-foreground: #F4F6F8;
-  --sidebar-border: #3A5F7D;
-  --sidebar-ring: #F4F6F8;
-  --sidebar: #0A2D4E;
+  --destructive-foreground: #F5F7F4;
+  --border: #0F7A2A;
+  --input: #0B4F1A;
+  --ring: #1F9A3F;
+  --chart-1: #1F9A3F;
+  --chart-2: #0F7A2A;
+  --chart-3: #0B4F1A;
+  --chart-4: #2E2E2E;
+  --chart-5: #F5F7F4;
+  --sidebar-background: #0B4F1A;
+  --sidebar-foreground: #F5F7F4;
+  --sidebar-primary: #0F7A2A;
+  --sidebar-primary-foreground: #F5F7F4;
+  --sidebar-accent: #1F9A3F;
+  --sidebar-accent-foreground: #F5F7F4;
+  --sidebar-border: #0F7A2A;
+  --sidebar-ring: #1F9A3F;
+  --radius: 0.5rem;
+  --sidebar: #0B4F1A;
 }
 
 /* define theme */

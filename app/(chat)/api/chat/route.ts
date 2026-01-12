@@ -8,6 +8,9 @@ import {
   streamText,
 } from "ai";
 import { after } from "next/server";
+import fs from "fs";
+import path from "path";
+import { pipeline } from "@xenova/transformers";
 import {
   createResumableStreamContext,
   type ResumableStreamContext,
@@ -41,6 +44,35 @@ import { type PostRequestBody, postRequestBodySchema } from "./schema";
 
 export const maxDuration = 60;
 
+// --- RAG: Load embeddings and setup ---
+const EMBEDDINGS_PATH = path.join(process.cwd(), "lib", "rag_docs", "embeddings.json");
+let ragEmbeddings: Array<{ text: string; embedding: number[]; filename?: string }> = [];
+let embedQuery: ((text: string) => Promise<number[]>) | null = null;
+
+async function setupRag() {
+  if (!ragEmbeddings.length && fs.existsSync(EMBEDDINGS_PATH)) {
+    ragEmbeddings = JSON.parse(fs.readFileSync(EMBEDDINGS_PATH, "utf-8"));
+    console.log(`Loaded ${ragEmbeddings.length} RAG embeddings`);
+  }
+  if (!embedQuery) {
+    const pipe = await pipeline("feature-extraction", "Xenova/all-MiniLM-L6-v2");
+    embedQuery = async (text: string) => {
+      const out = await pipe(text, { pooling: "mean", normalize: true });
+      return Array.from(out.data);
+    };
+  }
+}
+
+function cosineSimilarity(a: number[], b: number[]) {
+  let dot = 0, normA = 0, normB = 0;
+  for (let i = 0; i < a.length; i++) {
+    dot += a[i] * b[i];
+    normA += a[i] * a[i];
+    normB += b[i] * b[i];
+  }
+  return dot / (Math.sqrt(normA) * Math.sqrt(normB));
+}
+
 let globalStreamContext: ResumableStreamContext | null = null;
 
 export function getStreamContext() {
@@ -64,6 +96,9 @@ export function getStreamContext() {
 }
 
 export async function POST(request: Request) {
+  // Setup RAG embeddings and model
+  await setupRag();
+  
   let requestBody: PostRequestBody;
 
   try {
@@ -127,6 +162,33 @@ export async function POST(request: Request) {
       ? (messages as ChatMessage[])
       : [...convertToUIMessages(messagesFromDb), message as ChatMessage];
 
+    // --- RAG: Retrieve context for user query ---
+    let ragContext = "";
+    if (ragEmbeddings.length && message?.role === "user" && embedQuery) {
+      const textPart = message.parts?.find((p) => p.type === "text");
+      const userText = textPart?.type === "text" ? textPart.text : undefined;
+      if (userText) {
+        try {
+          const qEmbed = await embedQuery(userText);
+          let best = { score: -1, text: "" };
+          for (const doc of ragEmbeddings) {
+            const score = cosineSimilarity(qEmbed, doc.embedding);
+            if (score > best.score) best = { score, text: doc.text };
+          }
+          if (best.text) {
+            ragContext = best.text;
+          }
+          if (ragContext) {
+            console.log("RAG context used for query:", ragContext.slice(0, 200));
+          } else {
+            console.log("No RAG context used for this query.");
+          }
+        } catch (error) {
+          console.error("RAG retrieval error:", error);
+        }
+      }
+    }
+
     const { longitude, latitude, city, country } = geolocation(request);
 
     const requestHints: RequestHints = {
@@ -173,7 +235,9 @@ export async function POST(request: Request) {
 
         const result = streamText({
           model: getLanguageModel(selectedChatModel),
-          system: systemPrompt({ selectedChatModel, requestHints }),
+          system: ragContext
+            ? `CONTEXT FROM KNOWLEDGE BASE:\n${ragContext}\n\n---\n\n${systemPrompt({ selectedChatModel, requestHints })}`
+            : systemPrompt({ selectedChatModel, requestHints }),
           messages: await convertToModelMessages(uiMessages),
           stopWhen: stepCountIs(5),
           experimental_activeTools: isReasoningModel

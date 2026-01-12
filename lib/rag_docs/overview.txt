@@ -1,0 +1,139 @@
+Product Overview & Core Value Proposition
+
+Product Name (working): Lion Golf / Lion Caddie
+Category: AI-powered golf performance & on-course decision platform
+
+What the Product Is
+
+This is an AI-powered golf app designed to help golfers make better decisions, hit smarter shots, and understand their game at a deeper level — both during a round and after the round is over.
+
+Unlike traditional golf apps that focus primarily on scorekeeping or static stats, this product acts like a digital caddie + performance analyst, combining:
+
+real-time course context
+
+shot-level data
+
+the player’s actual golf bag
+
+historical performance patterns
+
+AI reasoning
+
+The goal is not just to track golf, but to actively improve how the golfer plays.
+
+Who It’s For
+
+The app is built for serious recreational golfers — players who:
+
+care about improving, not just recording scores
+
+think strategically on the course
+
+want actionable feedback, not generic tips
+
+may already be low-handicap or aspiring to be
+
+This is not a casual scorecard app and not a swing-coaching replacement.
+It sits squarely in the middle: decision-making, course management, and performance awareness.
+
+Core Value Proposition
+
+“Play smarter golf with AI that understands your bag, your tendencies, and the hole in front of you.”
+
+The app helps golfers answer questions like:
+
+What club should I actually hit here?
+
+Is going for it worth the risk?
+
+Why do I keep missing approaches from this distance?
+
+Where am I really losing strokes?
+
+What should my focus be next round?
+
+All of this is delivered through clean UI, map-based visuals, and short, high-signal AI feedback.
+
+What Makes It Different
+
+Most golf apps do one of the following:
+
+basic GPS + yardage
+
+raw stat tracking
+
+post-round summaries with little interpretation
+
+This product is different because:
+
+It knows your golf bag (actual carry distances, preferred clubs)
+
+It understands hole context (distance, pin location, targets)
+
+It reasons about risk vs reward
+
+It delivers situational advice, not generic tips
+
+It connects what happened to what to change next
+
+The AI isn’t a chatbot for the sake of it — it’s a golf-specific reasoning engine.
+
+High-Level Feature Pillars
+
+At a high level, the product is built around four pillars:
+
+On-Course Intelligence
+
+GPS maps
+
+yardages
+
+targets
+
+live club recommendations
+
+Shot-Level Logging
+
+drives, approaches, chips, putts
+
+outcome-based inputs (not overly complex)
+
+AI Caddie
+
+contextual suggestions
+
+short, clear guidance
+
+personalized to the golfer’s bag and tendencies
+
+Performance Analysis
+
+meaningful stats
+
+trend detection
+
+actionable improvement insights
+
+Each of these pillars will be expanded in later context chunks.
+
+Tone & Philosophy
+
+The product is intentionally:
+
+calm, confident, and professional
+
+data-driven, not hype-driven
+
+helpful without being overwhelming
+
+serious about performance
+
+The AI behaves like a good caddie:
+
+concise
+
+situational
+
+never condescending
+
+never overtalking

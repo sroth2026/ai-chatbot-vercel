@@ -1,0 +1,278 @@
+Post-Round Analysis & Performance Insights
+Purpose
+
+The post-round experience is where real improvement happens.
+
+Lion Caddie is designed to turn raw shot data into clear, actionable understanding — not charts for the sake of charts.
+
+The goal is simple:
+
+Help golfers understand why they scored what they scored, and what to focus on next.
+
+From Data to Insight
+
+After each round, the app automatically analyzes:
+
+driving accuracy and tendencies
+
+approach performance by distance band
+
+short game efficiency
+
+putting outcomes
+
+scoring patterns by hole type
+
+Instead of flooding the user with every metric, the system surfaces only the most meaningful signals.
+
+AI-Driven Interpretation
+
+The AI doesn’t just report stats — it interprets them.
+
+Examples:
+
+identifying distances where approaches consistently miss
+
+spotting directional bias off the tee
+
+recognizing when aggression hurts scoring
+
+highlighting strengths worth leaning into
+
+This bridges the gap between knowing the numbers and knowing what to change.
+
+Focused Feedback
+
+Post-round insights are intentionally:
+
+concise
+
+prioritized
+
+framed as improvement levers
+
+Golfers are guided toward one or two key takeaways per round, not a checklist of flaws.
+
+Long-Term Trend Tracking
+
+Over time, Lion Caddie builds a performance profile that reveals:
+
+scoring trends
+
+consistency vs volatility
+
+improvement or regression areas
+
+decision quality vs execution issues
+
+This allows golfers to measure progress in a way that actually reflects how they play.
+
+Context 6/10 — Personalized Golf Bag Intelligence
+Why the Bag Matters
+
+Every golfer plays a different game — because every golfer carries a different bag.
+
+Lion Caddie treats the golf bag as core intelligence, not a static list.
+
+Bag Setup
+
+Golfers define:
+
+clubs in the bag
+
+realistic carry distances
+
+preferred clubs under pressure
+
+This information becomes foundational to all AI reasoning.
+
+Real-World Carry, Not Marketing Numbers
+
+The system prioritizes:
+
+actual carry distances
+
+consistency over max distance
+
+controllability vs raw power
+
+This ensures advice is grounded in how the golfer truly plays, not how they wish they played.
+
+Dynamic Club Recommendations
+
+When making suggestions, the AI considers:
+
+distance gaps
+
+miss tendencies per club
+
+risk profile of the hole
+
+preferred shot shapes
+
+The result is advice that feels personal and trustworthy, not generic.
+
+Bag Evolution Over Time
+
+As rounds are logged, Lion Caddie learns:
+
+which clubs produce reliable outcomes
+
+which clubs create unnecessary risk
+
+how distance control changes over time
+
+The bag becomes a living model, not a static setup.
+
+Context 7/10 — Decision-Making & Course Management
+The Real Scoring Edge
+
+Most strokes are lost through poor decisions, not poor swings.
+
+Lion Caddie is built to address this directly.
+
+Risk vs Reward Modeling
+
+The AI evaluates:
+
+distance to trouble
+
+probability of success
+
+cost of failure
+
+expected scoring outcome
+
+This allows golfers to understand when:
+
+attacking makes sense
+
+conservatism saves strokes
+
+ego hurts scoring
+
+Smart Targets, Not Just Yardage
+
+The app encourages:
+
+center-of-green targets
+
+safer landing zones
+
+preferred approach distances
+
+It helps golfers stop asking “Can I hit this?”
+and start asking “Should I?”
+
+Playing the Hole Backwards
+
+The system often frames decisions by asking:
+
+“Where do you want your next shot from?”
+
+This strategic framing leads to smarter planning and fewer blow-up holes.
+
+Context 8/10 — UX Philosophy & In-Round Experience
+Built for Real Golf
+
+Lion Caddie is designed for actual use on the course, not post-round analysis only.
+
+Core principles:
+
+minimal taps
+
+fast interactions
+
+zero clutter
+
+readable outdoors
+
+No Distractions
+
+The app avoids:
+
+unnecessary notifications
+
+constant AI interruptions
+
+complex menus mid-round
+
+The golfer stays present, focused, and in rhythm.
+
+Respecting Pace of Play
+
+Every interaction is designed to be completed in seconds, not minutes.
+
+Lion Caddie helps — it never slows the round.
+
+Context 9/10 — AI Philosophy & Trust
+AI You Can Trust
+
+The AI is designed to earn trust by being:
+
+transparent in reasoning
+
+consistent in guidance
+
+conservative when uncertainty is high
+
+It avoids absolute claims and adapts as confidence increases.
+
+Short, Clear, Situational
+
+The AI speaks like a good caddie:
+
+brief
+
+relevant
+
+calm
+
+No lectures. No jargon. No over-analysis.
+
+Learning Without User Effort
+
+The system improves automatically through:
+
+logged rounds
+
+repeated situations
+
+observed outcomes
+
+Golfers never have to “train” the AI manually.
+
+Context 10/10 — Product Vision & Long-Term Direction
+The Bigger Picture
+
+Lion Caddie is not just a golf app — it’s a decision intelligence platform for golfers.
+
+The long-term vision is to help golfers:
+
+understand their game deeply
+
+make confident decisions
+
+improve sustainably
+
+enjoy golf more
+
+Not a Swing Coach Replacement
+
+Lion Caddie does not compete with:
+
+swing coaches
+
+launch monitors
+
+lessons
+
+It complements them by addressing the part of golf most tools ignore: decision-making.
+
+A Smarter Way to Play
+
+At its core, the product is about this idea:
+
+Better decisions lead to better golf.
+
+Lion Caddie exists to make those decisions easier, clearer, and more personalized — round after round.
